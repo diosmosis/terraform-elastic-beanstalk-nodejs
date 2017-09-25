@@ -106,13 +106,6 @@ resource "aws_elastic_beanstalk_environment" "eb_env" {
     value     = "${aws_iam_instance_profile.beanstalk_service.name}"
   }
 
-  # Configure your environment to launch resources in a custom VPC
-  setting {
-    namespace = "aws:ec2:vpc"
-    name      = "AssociatePublicIpAddress"
-    value     = "${var.public_ip}"
-  }
-
   # Configure your environment's Auto Scaling group.
   setting {
     namespace = "aws:autoscaling:asg"

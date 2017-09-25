@@ -34,11 +34,6 @@ variable "instance_type" {
   default = "t2.small"
   description = "The EC2 instance type"
 }
-variable "public_ip" {
-  type = "string"
-  default = "false"
-  description = "EC2 instances must have a public ip (true | false)"
-}
 variable "min_instance" {
   type    = "string"
   default = "1"
