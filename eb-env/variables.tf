@@ -34,11 +34,6 @@ variable "instance_type" {
   default = "t2.small"
   description = "The EC2 instance type"
 }
-variable "ssh_key_name" {
-  type    = "string"
-  default = "Ireland_VPC"
-  description = "The EC2 SSH KeyPair Name"
-}
 variable "public_ip" {
   type = "string"
   default = "false"
