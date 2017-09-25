@@ -80,6 +80,8 @@ resource "aws_iam_policy_attachment" "beanstalk_ec2_web" {
 resource "aws_elastic_beanstalk_environment" "eb_env" {
   name                = "${var.service_name}-${var.env}"
   application         = "${var.service_name}"
+  # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html#concepts.platforms.nodejs
+  solution_stack_name = "${var.eb_solution_stack_name}"
 
   # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html
   # Configure your environment's EC2 instances.

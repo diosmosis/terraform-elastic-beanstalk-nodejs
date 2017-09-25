@@ -24,6 +24,11 @@ variable "env" {
 }
 
 # Instance
+variable "eb_solution_stack_name" {
+  type    = "string"
+  default = "64bit Amazon Linux 2017.03 v4.2.2 running Node.js"
+  description = "The Elastic Beanstalk solution stack name"
+}
 variable "instance_type" {
   type    = "string"
   default = "t2.small"
