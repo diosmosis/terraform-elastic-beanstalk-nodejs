@@ -92,11 +92,6 @@ resource "aws_elastic_beanstalk_environment" "eb_env" {
   }
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
-    name      = "SecurityGroups"
-    value     = "${var.security_groups}"
-  }
-  setting {
-    namespace = "aws:autoscaling:launchconfiguration"
     name      = "IamInstanceProfile"
     value     = "${aws_iam_instance_profile.beanstalk_ec2.name}"
   }

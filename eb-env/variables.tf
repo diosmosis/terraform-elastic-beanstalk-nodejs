@@ -112,13 +112,6 @@ variable "xray_enable" {
   default = "true"
 }
 
-# Security
-variable "security_groups" {
-  type    = "string"
-  default = "elasticbeanstalk-default"
-  description = "Lists the Amazon EC2 security groups to assign to the EC2 instances in the Auto Scaling group in order to define firewall rules for the instances."
-}
-
 # Elastic File Storage (Environment variables)
 variable "efs_id" {
   type    = "string"
