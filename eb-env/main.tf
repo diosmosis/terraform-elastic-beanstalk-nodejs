@@ -114,21 +114,6 @@ resource "aws_elastic_beanstalk_environment" "eb_env" {
   # Configure your environment to launch resources in a custom VPC
   setting {
     namespace = "aws:ec2:vpc"
-    name      = "VPCId"
-    value     = "${var.vpc_id}"
-  }
-  setting {
-    namespace = "aws:ec2:vpc"
-    name      = "Subnets"
-    value     = "${var.vpc_subnets}"
-  }
-  setting {
-    namespace = "aws:ec2:vpc"
-    name      = "ELBSubnets"
-    value     = "${var.elb_subnets}"
-  }
-  setting {
-    namespace = "aws:ec2:vpc"
     name      = "AssociatePublicIpAddress"
     value     = "${var.public_ip}"
   }

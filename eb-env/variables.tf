@@ -123,18 +123,6 @@ variable "xray_enable" {
 }
 
 # Security
-variable "vpc_id" {
-  type    = "string"
-  description = "The ID for your VPC."
-}
-variable "vpc_subnets" {
-  type    = "string"
-  description = "The IDs of the Auto Scaling group subnet or subnets."
-}
-variable "elb_subnets" {
-  type    = "string"
-  description = "The IDs of the subnet or subnets for the elastic load balancer."
-}
 variable "security_groups" {
   type    = "string"
   default = "elasticbeanstalk-default"
